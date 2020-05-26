@@ -8,37 +8,54 @@
     android:padding="30dp"
     android:gravity="center_horizontal"
     android:id="@+id/frg_board"
+    android:background="@android:color/holo_green_light"
     tools:context=".ui.onboard.BoardFragment">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="300dp"
-        android:src="@drawable/summer" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:src="@drawable/summer" />-->
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="358dp"
+        android:layout_height="511dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/delivery_man" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="15dp"-->
+<!--        android:text="@string/hello_blank_fragment"-->
+<!--        android:textSize="15sp"/>-->
 
     <TextView
         android:id="@+id/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
-        android:text="Это бланк фрагмент"
-        android:textSize="22sp"/>
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:text="@string/hello_blank_fragment"
-        android:textSize="15sp"/>
+        android:layout_below="@+id/animation_view"
+        android:layout_marginTop="-480dp"
+        android:text=" Привет "
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:textSize="33sp" />
 
     <Button
-        android:id="@id/start"
+        android:id="@+id/start"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Get started"
+        android:layout_height="45dp"
+        android:layout_below="@+id/animation_view"
+        android:layout_marginTop="400dp"
+        android:background="#2E9FD1"
+        android:baselineAligned="false"
+        android:text="Get Started"
         android:visibility="invisible"
-        android:background="@android:color/holo_red_dark"/>
-
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
 
 
 

@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingRight="16dp"
     android:paddingLeft="16dp">
-    <TextView
-        android:id="@+id/main2_info"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#146317"
-        android:paddingTop="7dp"
-        android:paddingBottom="7dp"
-        android:text="Профиль"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"/>
+<!--    <TextView-->
+<!--        android:id="@+id/main2_info"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#146317"-->
+<!--        android:paddingTop="7dp"-->
+<!--        android:paddingBottom="7dp"-->
+<!--        android:text="Профиль"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:textSize="20sp"/>-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -66,7 +67,6 @@
                 android:paddingBottom="10dp"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -145,7 +145,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
-        android:inputType="textWebEmailAddress"
         android:textColor="@android:color/black"
         android:textSize="15sp" />
 
@@ -179,10 +178,11 @@
             android:id="@+id/btn_profile_change"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/btn_rounded_gradient"
             android:layout_weight="1"
             android:text="Редактировать"
             android:textAllCaps="false"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/primary_text_dark"
             android:textSize="15sp" />
 
         <Button
@@ -191,8 +191,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text=" Сохранить "
+            android:background="@drawable/btn_rounded_gradient"
             android:textAllCaps="false"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/primary_text_dark"
             android:textSize="15sp" />
 
         <Button
@@ -203,7 +204,8 @@
             android:onClick="Change"
             android:text="  Закрыть  "
             android:textAllCaps="false"
-            android:textColor="@android:color/black"
+            android:background="@drawable/btn_rounded_gradient"
+            android:textColor="@android:color/primary_text_dark"
             android:textSize="15sp"
             android:visibility="gone" />
 

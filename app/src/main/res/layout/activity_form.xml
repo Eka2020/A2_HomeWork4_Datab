@@ -13,10 +13,14 @@
         android:id="@+id/edit_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/edit_rounded"
+        style="@style/EditTextStyle"
         android:hint="Задача" />
 
     <EditText
         android:id="@+id/edit_desc"
+        style="@style/EditTextStyle"
+        android:background="@drawable/edit_rounded"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Описание задачи" />

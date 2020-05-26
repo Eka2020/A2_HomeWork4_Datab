@@ -5,6 +5,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
@@ -18,18 +21,36 @@ import com.geektech.a2_homework4_database.FormActivity;
 import com.geektech.a2_homework4_database.R;
 import com.geektech.a2_homework4_database.models.Task;
 import com.geektech.a2_homework4_database.ui.OnItemClickListener;
-
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
     private TaskAdapter adapter;
     private ArrayList<Task> list = new ArrayList<>();
     private AlertDialog.Builder ad;
+    private  Boolean sorted=false;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_home, container, false);
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        list = new ArrayList<>();
+        App.getInstance().getDatabase().taskDao().getAllLive().observe(this, new Observer<List<Task>>() {
+            @Override
+            public void onChanged(final List<Task> tasks) {
+                list.clear();
+                list.addAll(tasks);
+                Collections.reverse(list);
+                adapter.notifyDataSetChanged();
+            }
+        });
+
     }
 
     @Override
@@ -40,7 +61,7 @@ public class HomeFragment extends Fragment {
         list.addAll(App.getInstance().getDatabase().taskDao().getAll());
         adapter = new TaskAdapter(list);
         recyclerView.setAdapter(adapter);
-        loadData();
+        LoadDataSorted();
         adapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(int pos) {
@@ -75,7 +96,40 @@ public class HomeFragment extends Fragment {
             }
         });}
 
-    private  void loadData(){
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId()== R.id.action_sort){
+            if (sorted)
+                LoadData();
+            }
+        else{
+            LoadDataSorted();
+            sorted=true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void LoadDataSorted() {
+        App.getInstance()
+                .getDatabase()
+                .taskDao()
+                .getAllSortedLive()
+                .observe(this, new Observer<List<Task>>(){
+                    @Override
+                    public void onChanged(List<Task> tasks) {
+                        list.clear();
+                        list.addAll(tasks);
+                        adapter.notifyDataSetChanged();
+                    }
+                });
+    }
+
+    public void LoadData() {
         App.getInstance()
                 .getDatabase()
                 .taskDao()
@@ -90,4 +144,5 @@ public class HomeFragment extends Fragment {
                     }
                 });
     }
+
 }
