@@ -6,7 +6,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.geektech.a2_homework6_firestore"
+        applicationId "com.geektech.a2_homework7_firestore"
         minSdkVersion 17
         targetSdkVersion 29
         versionCode 1

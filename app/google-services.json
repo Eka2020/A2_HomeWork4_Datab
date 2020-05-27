@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "975655340699",
+    "firebase_url": "https://taskapphomework6.firebaseio.com",
+    "project_id": "taskapphomework6",
+    "storage_bucket": "taskapphomework6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975655340699:android:f5c619f24f594400b0943e",
+        "android_client_info": {
+          "package_name": "com.geektech.a2_homework4_database"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975655340699-vhaunqgn5datenlp4vg38pakjbtmiupl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.geektech.a2_homework4_database",
+            "certificate_hash": "8a45ba25d7a5a38a8475536c7c48f708db4f9cb6"
+          }
+        },
+        {
+          "client_id": "975655340699-isdhkps6h31lq1fld365h2g6kl9jpvvj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUmcrGJ86y5RQVm1TEFmtu9OLqQTDbynU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975655340699-isdhkps6h31lq1fld365h2g6kl9jpvvj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
