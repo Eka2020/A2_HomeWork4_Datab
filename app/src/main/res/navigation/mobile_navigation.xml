@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.geektech.a2_homework4_database.ui.home.HomeFragment"
+        android:name="com.geektech.a2_homework6_firestore.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
-        android:name="com.geektech.a2_homework4_database.ui.home.HomeSecondFragment"
+        android:name="com.geektech.a2_homework6_firestore.ui.home.HomeSecondFragment"
         android:label="@string/home_second"
         tools:layout="@layout/fragment_home_second">
         <action
@@ -31,13 +31,18 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.geektech.a2_homework4_database.ui.gallery.GalleryFragment"
+        android:name="com.geektech.a2_homework6_firestore.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.geektech.a2_homework4_database.ui.slideshow.SlideshowFragment"
+        android:name="com.geektech.a2_homework6_firestore.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_firestore"
+        android:name="com.geektech.a2_homework6_firestore.ui.firestore.FirestoreFragment"
+        android:label="@string/menu_firestore"
+        tools:layout="@layout/fragment_firestore" />
 </navigation>

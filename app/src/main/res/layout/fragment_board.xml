@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_below="@+id/animation_view"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="380dp"
         android:background="#2E9FD1"
         android:baselineAligned="false"
         android:text="Get Started"

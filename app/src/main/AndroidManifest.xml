@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.geektech.a2_homework4_database">
+    package="com.geektech.a2_homework6_firestore">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="Manifest.permission.MANAGE_DOCUMENTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
     <application
-        android:name=".App"
+        android:name="com.geektech.a2_homework6_firestore.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,22 +17,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".login.PhoneActivity"></activity>
+        <activity android:name="com.geektech.a2_homework6_firestore.login.PhoneActivity"></activity>
         <activity
-            android:name=".ui.onboard.OnBoardActivity"
-            android:parentActivityName=".FormActivity"></activity>
+            android:name="com.geektech.a2_homework6_firestore.ui.onboard.OnBoardActivity"
+            android:parentActivityName="com.geektech.a2_homework6_firestore.FormActivity"></activity>
         <activity
-            android:name=".ui.header.ProfileActivity"
-            android:parentActivityName=".FormActivity"></activity>
+            android:name="com.geektech.a2_homework6_firestore.ui.header.ProfileActivity"
+            android:parentActivityName="com.geektech.a2_homework6_firestore.FormActivity"></activity>
         <activity
-            android:name=".FormActivity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:name="com.geektech.a2_homework6_firestore.FormActivity"
+            android:parentActivityName="com.geektech.a2_homework6_firestore.MainActivity"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.geektech.a2_homework6_firestore.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.PICK" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
