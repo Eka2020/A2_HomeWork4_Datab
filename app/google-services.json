@@ -42,6 +42,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975655340699:android:0ffe4385c49c3532b0943e",
+        "android_client_info": {
+          "package_name": "com.geektech.a2_homework7_firestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975655340699-isdhkps6h31lq1fld365h2g6kl9jpvvj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUmcrGJ86y5RQVm1TEFmtu9OLqQTDbynU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975655340699-isdhkps6h31lq1fld365h2g6kl9jpvvj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

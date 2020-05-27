@@ -49,17 +49,11 @@
 
             <ImageView
                 android:id="@+id/profile_image"
-                android:layout_width="134dp"
-                android:layout_height="137dp"
+                android:layout_width="138dp"
+                android:layout_height="163dp"
                 android:paddingRight="0dp"
+                android:paddingTop="40dp"
                 android:src="@drawable/avatar" />
-
-            <Button
-                android:id="@+id/button_image"
-                android:layout_width="match_parent"
-                android:layout_height="49dp"
-                android:text="Вставить"
-                android:textAllCaps="false" />
 
         </LinearLayout>
 

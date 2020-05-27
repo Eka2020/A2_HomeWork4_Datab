@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="32dp"
-    tools:context="com.geektech.a2_homework4_database.login.PhoneActivity">
+    tools:context="com.geektech.a2_homework7_firestore.login.PhoneActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
