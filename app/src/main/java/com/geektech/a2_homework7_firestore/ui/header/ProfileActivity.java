@@ -40,7 +40,7 @@ public class ProfileActivity extends AppCompatActivity {
           image.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View v) {
-                  PutImage();
+                  GalleryImage();
               }
           });
 
@@ -121,7 +121,7 @@ public class ProfileActivity extends AppCompatActivity {
                 });
     }
 
-    private void PutImage () {
+    private void GalleryImage () {
         Intent galleryImage = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         startActivityForResult(galleryImage, REQUEST_CODE);
     }
@@ -130,7 +130,6 @@ public class ProfileActivity extends AppCompatActivity {
         if (requestCode == REQUEST_CODE && resultCode == PICK_IMAGE ) {
             imageUri=data.getData();
             image.setImageURI(imageUri);
-            Toast.makeText(getApplicationContext(), "Успешно", Toast.LENGTH_SHORT).show();
         }
 }
 }
