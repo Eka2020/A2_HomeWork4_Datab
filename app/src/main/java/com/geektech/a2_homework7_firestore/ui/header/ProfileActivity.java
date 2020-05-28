@@ -30,9 +30,8 @@ public class ProfileActivity extends AppCompatActivity {
     ImageView image;
     private static final int PICK_IMAGE=1;
     private static final int REQUEST_CODE=2;
-    private Uri imageUri;
 
-      @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
           super.onCreate(savedInstanceState);
           setContentView(R.layout.activity_profile);
@@ -101,7 +100,6 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
     }
-
     private void getData2() {
         String uid = FirebaseAuth.getInstance().getUid();
         FirebaseFirestore.getInstance().collection("users")
@@ -125,14 +123,16 @@ public class ProfileActivity extends AppCompatActivity {
         Intent galleryImage = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         startActivityForResult(galleryImage, REQUEST_CODE);
     }
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE && resultCode == PICK_IMAGE ) {
-            imageUri=data.getData();
-            image.setImageURI(imageUri);
-        }
-}
-}
+        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK && data.getData()!=null) {
+                Uri imageUri = data.getData();
+                image.setImageURI(imageUri); }
+    }
+  }
+
 
 //    private void getData() {
 //        String uid= FirebaseAuth.getInstance().getUid();
